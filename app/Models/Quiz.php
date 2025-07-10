@@ -9,4 +9,10 @@ class Quiz extends Model
 {
     /** @use HasFactory<\Database\Factories\QuizFactory> */
     use HasFactory;
+
+    protected $guarded = ['id'];
+
+    protected $casts = [
+        'questions' => 'array',
+    ];
 }

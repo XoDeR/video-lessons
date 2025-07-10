@@ -17,7 +17,18 @@ class QuizFactory extends Factory
     public function definition(): array
     {
         return [
-            //
+            'title' => fake()->text(),
+            'questions' => [
+                [
+                    'question_text' => fake()->text(),
+                    'type' => 'text',
+                ],
+                [
+                    'question_text' => fake()->text(),
+                    'type' => 'single',
+                    'options' => ['Yes', 'No'],
+                ],
+            ]
         ];
     }
 }
