@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import LessonLayout from '@/layouts/LessonLayout.vue';
+
 
 const props = defineProps<{
   lessons: {
@@ -14,4 +16,7 @@ console.log(props);
 
 <template>
   <div>Lessons</div>
+  <LessonLayout>
+    <div>Lessons</div>
+  </LessonLayout>
 </template>
