@@ -32,6 +32,10 @@ onMounted(() => {
   if (props.progressColor) {
     document.documentElement.style.setProperty('--plyr-color-main', props.progressColor)
   }
+
+  player.on('ended', event => {
+    // 
+  });
 })
 </script>
 
